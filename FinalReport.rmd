@@ -1,7 +1,7 @@
 ---
 title: "Aides Drug"
-author: "Put your name here!"
-date: "put the date here"
+author: "Rachel Polack!"
+date: "7/12/2022"
 output: html_document
 ---
 
@@ -9,6 +9,13 @@ output: html_document
 require(tidyverse)
 require(tigerstats)
 triUmp <-read.csv(file="triUmpsal.csv",header=TRUE)
+females<-filter(triUmp, gender=="F")
+```
+
+
+```{r eval=FALSE}
+females <- females %>%
+mutate(across(where(is.character), as.factor))
 ```
 
 # Introduction
@@ -21,6 +28,7 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+We need to separate out the females in the population, and run the interface against the subset that is only made up of females.
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
@@ -31,9 +39,21 @@ A new  preventative aides drug (triUmpsal) is under test in clinical trials. Con
 
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
+```{r}
+barchartGC(~infected + treatment,data=females)
+barchartGC(~infected + treatment,data=females, type="percent")
+
+```
+
+Given the two graphs above, we can see that the frequency of females who got aids is relatively much smaller compared to those who didn't. However, looking at the percentage graph we can see that among the females who got aids, most of these people have taken the drug. In other words, females who received the treatment got aids still. This may suggest the ineffectiveness of the drug against aids among females.
+
 ### Numerical Descriptive Results
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
+
+
+
+
 
 ## Inferential Results
 
