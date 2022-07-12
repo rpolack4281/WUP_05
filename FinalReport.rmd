@@ -51,6 +51,12 @@ Given the two graphs above, we can see that the frequency of females who got aid
 
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
+```{r}
+table1 <- xtabs(~infected + treatment, data=females)
+rowPerc(table1)
+colPerc(table1)
+```
+The two tables above show the specific values for the percentages of females who did and did not get the treatment and whether they got aids or not. Similar to the observations made in the graphical descriptive results, majority of the females, both who took the drug and did not, did get aids. Specifically, 96.31% of females who took the drug did not get aids while 97.58% of females who did not get the treatment didn't get aids. However, looking at the percentages of females who got aids, 58.82% took the drug which is higher than the percentage of females who received the placebo. Therefore, this supports the idea that the drug may not be effective against aids among females.
 
 
 
