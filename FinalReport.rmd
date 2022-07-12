@@ -24,6 +24,11 @@ mutate(across(where(is.character), as.factor))
 
 A new  preventative aides drug (triUmpsal) is under test in clinical trials. Consider only the females, does this drug seem effective?  Hint - use dplyr to obtain that subpopulation with the filter command.
 
+$H0$ There is no difference between taking the drug and taking the placebo for females getting aids.
+
+$HA$ There is a difference between taking the drug and taking the placebo for females getting aids.
+
+
 # Methods
 
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
