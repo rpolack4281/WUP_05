@@ -77,3 +77,7 @@ Based on the chi-squared test above, the p-value is very small which means that 
 # Discussion and Conclusion
 
 <!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
+
+In this write-up we analyzed whether the drug trialUmp is effective in preventing aids infection among females. This drug was compared to a placebo, and the frequency and percentage if infection were tallied. Based of the description and inferential results, it was observed among females who got aids, majority are those who got the treatment. In other words, the drug showed to be ineffective against the prevention of aids among females.
+
+
